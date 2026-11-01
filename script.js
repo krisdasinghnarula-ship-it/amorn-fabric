@@ -1,36 +1,33 @@
-javascript
-/* =========================================
+/* =========================
    MOBILE MENU
-========================================= */
+========================= */
 
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.querySelector(".nav-links");
 
-menuButton.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (menuButton && navLinks) {
+
+    menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
 
-/* =========================================
-   CLOSE MOBILE MENU AFTER CLICKING
-========================================= */
+    const navItems = navLinks.querySelectorAll("a");
 
-const navigationLinks = document.querySelectorAll(".nav-links a");
+    navItems.forEach((link) => {
 
-navigationLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
 
     });
 
-});
+}
 
 
-/* =========================================
+/* =========================
    LINE PLACEHOLDER
-========================================= */
+========================= */
 
 function linePlaceholder() {
 
@@ -42,16 +39,14 @@ function linePlaceholder() {
 }
 
 
-/* =========================================
-   SIMPLE SCROLL REVEAL
-========================================= */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
-const revealElements = document.querySelectorAll(
-    ".fabric-card, .social-card, .about-content"
-);
+const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
 
         entries.forEach((entry) => {
 
@@ -59,21 +54,19 @@ const revealObserver = new IntersectionObserver(
 
                 entry.target.classList.add("visible");
 
+                observer.unobserve(entry.target);
+
             }
 
         });
 
     },
     {
-        threshold: 0.15
+        threshold: 0.12
     }
 );
 
 
 revealElements.forEach((element) => {
-
-    element.classList.add("reveal");
-
     revealObserver.observe(element);
-
 });
