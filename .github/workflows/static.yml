@@ -34,22 +34,21 @@ jobs:
         with:
           path: '.'
 
-      - name: Remove stale Pages deployment record
+      - name: Remove stale Pages deployment records
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           DEPLOYMENT_IDS=$(gh api \
-            "/repos/${{ github.repository }}/deployments?sha=dbdf81619f34e7fcdaad428a16ccdb3107b40a89&per_page=100" \
-            --jq '.[].id')
+            "/repos/${{ github.repository }}/deployments?environment=github-pages&per_page=100" \
+            --jq '.[] | select(.sha != "${{ github.sha }}") | .id')
 
           for ID in $DEPLOYMENT_IDS; do
-            echo "Removing stale deployment $ID"
-            gh api --method DELETE "/repos/${{ github.repository }}/deployments/$ID" || true
+            echo "Marking stale deployment $ID inactive"
+            gh api --method POST "/repos/${{ github.repository }}/deployments/$ID/statuses" \
+              -f state='inactive' \
+              -f description='Superseded by newer Pages deployment' \
+              || true
           done
-
-          gh api --method POST \
-            "/repos/${{ github.repository }}/pages/deployments/dbdf81619f34e7fcdaad428a16ccdb3107b40a89/cancel" \
-            || true
 
       - name: Deploy to GitHub Pages
         id: deployment
