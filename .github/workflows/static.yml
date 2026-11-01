@@ -4,13 +4,13 @@ name: Deploy static content to Pages
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  deployments: write
 
 concurrency:
   group: "pages"
@@ -34,10 +34,19 @@ jobs:
         with:
           path: '.'
 
-      - name: Cancel stuck Pages deployment
+      - name: Remove stale Pages deployment record
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          DEPLOYMENT_IDS=$(gh api \
+            "/repos/${{ github.repository }}/deployments?sha=dbdf81619f34e7fcdaad428a16ccdb3107b40a89&per_page=100" \
+            --jq '.[].id')
+
+          for ID in $DEPLOYMENT_IDS; do
+            echo "Removing stale deployment $ID"
+            gh api --method DELETE "/repos/${{ github.repository }}/deployments/$ID" || true
+          done
+
           gh api --method POST \
             "/repos/${{ github.repository }}/pages/deployments/dbdf81619f34e7fcdaad428a16ccdb3107b40a89/cancel" \
             || true
