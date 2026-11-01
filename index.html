@@ -1,15 +1,14 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amorn Fabric</title>
+    <title>Amorn Fabric | Premium Fabrics</title>
 
     <meta
         name="description"
-        content="Amorn Fabric — premium fabrics, timeless style."
+        content="Amorn Fabric — quality fabrics, timeless style. Explore our latest fabrics and collections."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -17,69 +16,70 @@ html
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
 
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0">
+    </script>
+
+
+    <!-- NAVIGATION -->
     <header class="navbar">
 
-        <a href="#" class="logo">
-            AMORN FABRIC
-        </a>
+        <div class="nav-container">
 
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#collection">Collection</a>
-            <a href="#social">Social</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <a href="#" class="logo">
+                AMORN <span>FABRIC</span>
+            </a>
 
-        <button class="menu-button" id="menuButton">
-            ☰
-        </button>
+            <button class="menu-button" id="menuButton" aria-label="Open menu">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+
+                <a href="#about">About</a>
+
+                <a href="#collection">Collection</a>
+
+                <a href="#social">Social</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
-
+    <!-- HERO -->
     <main>
 
         <section class="hero">
 
-            <div class="hero-overlay"></div>
-
             <div class="hero-content">
 
-                <p class="eyebrow">
-                    AMORN FABRIC
-                </p>
+                <p class="eyebrow">AMORN FABRIC</p>
 
                 <h1>
-                    Fabrics that make
-                    <em>the difference.</em>
+                    Fabrics that
+                    <em>make the difference.</em>
                 </h1>
 
-                <p class="hero-description">
-                    Discover carefully selected fabrics combining
-                    quality, character and timeless style.
+                <p class="hero-text">
+                    Quality fabrics selected for timeless style,
+                    craftsmanship and character.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a
-                        href="#collection"
-                        class="button button-dark"
-                    >
-                        Explore Collection
+                    <a href="#collection" class="button button-light">
+                        Explore Fabrics
                     </a>
 
-                    <a
-                        href="#contact"
-                        class="button button-outline"
-                    >
+                    <a href="#contact" class="button button-outline">
                         Contact Us
                     </a>
 
@@ -87,263 +87,188 @@ html
 
             </div>
 
-            <div class="hero-scroll">
-                Scroll to explore
-                <span>↓</span>
-            </div>
-
         </section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
+        <!-- ABOUT -->
+        <section class="about section" id="about">
 
-        <section id="about" class="section about">
+            <div class="about-content reveal">
 
-            <div class="section-label">
-                ABOUT AMORN FABRIC
-            </div>
-
-            <div class="about-grid">
-
-                <div>
-
-                    <h2>
-                        Quality fabrics.
-                        <br>
-                        Timeless style.
-                    </h2>
-
-                </div>
-
-                <div class="about-text">
-
-                    <p>
-                        At Amorn Fabric, we believe that the right
-                        fabric is the foundation of great design.
-                    </p>
-
-                    <p>
-                        Our collection brings together carefully
-                        selected materials, colours and patterns
-                        for those who appreciate quality and detail.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             COLLECTION
-        ========================== -->
-
-        <section id="collection" class="section collection">
-
-            <div class="section-header">
-
-                <div>
-
-                    <div class="section-label">
-                        OUR COLLECTION
-                    </div>
-
-                    <h2>
-                        Explore our fabrics
-                    </h2>
-
-                </div>
-
-                <p>
-                    Discover our latest fabrics and collections.
-                </p>
-
-            </div>
-
-
-            <div class="fabric-grid">
-
-                <article class="fabric-card">
-
-                    <div class="fabric-image fabric-one">
-                        <span>
-                            FABRIC 01
-                        </span>
-                    </div>
-
-                    <div class="fabric-info">
-
-                        <h3>
-                            Premium Collection
-                        </h3>
-
-                        <p>
-                            Coming soon
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="fabric-card">
-
-                    <div class="fabric-image fabric-two">
-                        <span>
-                            FABRIC 02
-                        </span>
-                    </div>
-
-                    <div class="fabric-info">
-
-                        <h3>
-                            Classic Collection
-                        </h3>
-
-                        <p>
-                            Coming soon
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="fabric-card">
-
-                    <div class="fabric-image fabric-three">
-                        <span>
-                            FABRIC 03
-                        </span>
-                    </div>
-
-                    <div class="fabric-info">
-
-                        <h3>
-                            Signature Collection
-                        </h3>
-
-                        <p>
-                            Coming soon
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SOCIAL
-        ========================== -->
-
-        <section id="social" class="section social">
-
-            <div class="section-label">
-                FOLLOW OUR LATEST
-            </div>
-
-            <div class="social-heading">
+                <p class="section-label">ABOUT AMORN FABRIC</p>
 
                 <h2>
-                    See what we're
-                    <em>working on.</em>
+                    Quality fabrics.
+                    <em>Timeless style.</em>
                 </h2>
 
                 <p>
-                    Follow Amorn Fabric on social media for
-                    new fabrics, colours and collections.
+                    At Amorn Fabric, we believe the right fabric is
+                    the foundation of great style.
                 </p>
+
+                <p>
+                    We offer a carefully selected range of fabrics
+                    for those who appreciate quality, texture,
+                    colour and craftsmanship.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FACEBOOK / FABRIC COLLECTION -->
+        <section class="collection section" id="collection">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">EXPLORE OUR FABRICS</p>
+
+                <h2>
+                    Latest fabrics,
+                    <em>straight from Amorn.</em>
+                </h2>
+
+                <p>
+                    Browse our latest fabrics and available selections
+                    directly from our Facebook page.
+                </p>
+
+            </div>
+
+
+            <div class="facebook-wrapper reveal">
+
+                <div class="facebook-card">
+
+                    <div class="facebook-header">
+
+                        <div>
+                            <p class="facebook-label">
+                                AMORN FABRIC
+                            </p>
+
+                            <h3>
+                                Latest from Facebook
+                            </h3>
+                        </div>
+
+                        <a
+                            href="https://www.facebook.com/amornfabricscollection/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="facebook-button"
+                        >
+                            Visit Facebook →
+                        </a>
+
+                    </div>
+
+
+                    <div class="facebook-feed">
+
+                        <div
+                            class="fb-page"
+                            data-href="https://www.facebook.com/amornfabricscollection/"
+                            data-tabs="timeline"
+                            data-width="500"
+                            data-height="700"
+                            data-small-header="false"
+                            data-adapt-container-width="true"
+                            data-hide-cover="false"
+                            data-show-facepile="false"
+                        >
+                            <blockquote
+                                cite="https://www.facebook.com/amornfabricscollection/"
+                                class="fb-xfbml-parse-ignore"
+                            >
+                                <a
+                                    href="https://www.facebook.com/amornfabricscollection/"
+                                >
+                                    Amorn Fabric
+                                </a>
+                            </blockquote>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOCIAL -->
+        <section class="social section" id="social">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">FOLLOW AMORN</p>
+
+                <h2>
+                    See what we're
+                    <em>up to.</em>
+                </h2>
 
             </div>
 
 
             <div class="social-grid">
 
-                <!-- FACEBOOK -->
-
                 <a
-                    href="https://www.facebook.com/share/19mtw8LP9M/"
+                    href="https://www.facebook.com/amornfabricscollection/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="social-card facebook-card"
+                    class="social-card reveal"
                 >
 
-                    <div class="social-top">
-
-                        <span class="social-platform">
-                            FACEBOOK
-                        </span>
-
-                        <span class="social-arrow">
-                            ↗
-                        </span>
-
+                    <div class="social-icon">
+                        f
                     </div>
 
                     <div>
+                        <p class="social-platform">
+                            Facebook
+                        </p>
 
                         <h3>
                             Amorn Fabric
                         </h3>
 
-                        <p>
-                            View our latest updates and
-                            fabric collections.
-                        </p>
-
+                        <span>
+                            View our latest fabrics →
+                        </span>
                     </div>
-
-                    <span class="social-link">
-                        Visit Facebook
-                    </span>
 
                 </a>
 
-
-                <!-- INSTAGRAM -->
 
                 <a
                     href="https://www.instagram.com/amornfabrics/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="social-card instagram-card"
+                    class="social-card reveal"
                 >
 
-                    <div class="social-top">
-
-                        <span class="social-platform">
-                            INSTAGRAM
-                        </span>
-
-                        <span class="social-arrow">
-                            ↗
-                        </span>
-
+                    <div class="social-icon instagram-icon">
+                        ◎
                     </div>
 
                     <div>
+                        <p class="social-platform">
+                            Instagram
+                        </p>
 
                         <h3>
                             @amornfabrics
                         </h3>
 
-                        <p>
-                            Explore our latest fabrics,
-                            colours and designs.
-                        </p>
-
+                        <span>
+                            Follow us on Instagram →
+                        </span>
                     </div>
-
-                    <span class="social-link">
-                        Visit Instagram
-                    </span>
 
                 </a>
 
@@ -352,33 +277,29 @@ html
         </section>
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
 
-        <section id="contact" class="contact">
+            <div class="contact-content reveal">
 
-            <div class="contact-content">
-
-                <div class="section-label">
+                <p class="section-label">
                     GET IN TOUCH
-                </div>
+                </p>
 
                 <h2>
-                    Looking for
-                    <em>the right fabric?</em>
+                    Looking for the
+                    <em>right fabric?</em>
                 </h2>
 
                 <p>
-                    Contact us directly to learn more about
-                    our fabrics, availability and collections.
+                    Contact us to enquire about fabrics,
+                    colours, availability and more.
                 </p>
 
-                <!-- LINE PLACEHOLDER -->
 
                 <a
                     href="#"
-                    class="button button-light"
+                    class="button button-dark"
                     onclick="return linePlaceholder()"
                 >
                     Contact us on LINE
@@ -391,22 +312,28 @@ html
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
 
-        <div class="footer-main">
+        <div class="footer-container">
 
-            <div class="footer-logo">
-                AMORN FABRIC
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    AMORN <span>FABRIC</span>
+                </a>
+
+                <p>
+                    Quality fabrics. Timeless style.
+                </p>
+
             </div>
+
 
             <div class="footer-links">
 
                 <a
-                    href="https://www.facebook.com/share/19mtw8LP9M/"
+                    href="https://www.facebook.com/amornfabricscollection/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -422,7 +349,8 @@ html
                 </a>
 
                 <a
-                    href="#contact"
+                    href="#"
+                    onclick="return linePlaceholder()"
                 >
                     LINE
                 </a>
@@ -431,14 +359,11 @@ html
 
         </div>
 
+
         <div class="footer-bottom">
 
             <p>
-                © 2026 Amorn Fabric
-            </p>
-
-            <p>
-                All rights reserved.
+                © 2026 Amorn Fabric. All rights reserved.
             </p>
 
         </div>
