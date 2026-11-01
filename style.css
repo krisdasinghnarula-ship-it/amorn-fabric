@@ -45,11 +45,9 @@ button {
 .nav-container {
     width: min(1200px, 90%);
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 28px 0;
 }
 
@@ -95,14 +93,10 @@ button {
 
 .hero {
     min-height: 88vh;
-
     display: flex;
     align-items: center;
-
     position: relative;
-
     color: white;
-
     background:
         linear-gradient(
             rgba(22, 21, 18, 0.80),
@@ -120,7 +114,6 @@ button {
 .hero-content {
     width: min(1200px, 90%);
     margin: auto;
-
     padding-top: 80px;
 }
 
@@ -133,14 +126,10 @@ button {
 
 .hero h1 {
     max-width: 800px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(52px, 7vw, 94px);
     font-weight: 400;
-
     line-height: 0.98;
-
     margin-bottom: 30px;
 }
 
@@ -151,12 +140,9 @@ button {
 
 .hero-text {
     max-width: 500px;
-
     font-size: 17px;
     line-height: 1.8;
-
     color: rgba(255,255,255,0.75);
-
     margin-bottom: 40px;
 }
 
@@ -174,14 +160,11 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 52px;
     padding: 0 27px;
-
     font-size: 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-
     transition:
         transform 0.25s ease,
         background 0.25s ease,
@@ -247,12 +230,9 @@ button {
 .about-content h2,
 .contact-content h2 {
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(42px, 5vw, 68px);
-
     line-height: 1.05;
     font-weight: 400;
-
     margin-bottom: 25px;
 }
 
@@ -265,7 +245,6 @@ button {
 .section-heading > p:last-child {
     max-width: 550px;
     margin: auto;
-
     color: #66625b;
     font-size: 16px;
 }
@@ -288,7 +267,6 @@ button {
 .about-content > p:not(.section-label) {
     max-width: 650px;
     margin: 0 auto 18px;
-
     color: #5d5952;
     font-size: 16px;
 }
@@ -303,18 +281,14 @@ button {
 }
 
 .facebook-wrapper {
-    width: min(850px, 100%);
+    width: min(1100px, 100%);
     margin: auto;
 }
 
 .facebook-card {
     background: white;
-
     border: 1px solid rgba(23,23,20,0.08);
-
-    box-shadow:
-        0 20px 60px rgba(30, 28, 24, 0.08);
-
+    box-shadow: 0 20px 60px rgba(30, 28, 24, 0.08);
     padding: 35px;
 }
 
@@ -322,13 +296,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 30px;
-
-    margin-bottom: 30px;
-
+    margin-bottom: 35px;
     padding-bottom: 25px;
-
     border-bottom: 1px solid rgba(23,23,20,0.08);
 }
 
@@ -337,7 +307,6 @@ button {
     letter-spacing: 3px;
     font-weight: 600;
     opacity: 0.5;
-
     margin-bottom: 7px;
 }
 
@@ -349,18 +318,12 @@ button {
 
 .facebook-button {
     flex-shrink: 0;
-
     border: 1px solid #171714;
-
     padding: 12px 18px;
-
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .facebook-button:hover {
@@ -368,13 +331,34 @@ button {
     color: white;
 }
 
-.facebook-feed {
-    width: 100%;
+/* Direct Facebook post embeds */
+.facebook-posts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
 
+.facebook-post-card {
+    width: 100%;
+    min-width: 0;
     display: flex;
     justify-content: center;
-
     overflow: hidden;
+    background: #f8f7f4;
+    border: 1px solid rgba(23,23,20,0.06);
+}
+
+.facebook-post-card iframe {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    border: 0;
+}
+
+.facebook-video-card iframe {
+    width: 267px;
+    max-width: 100%;
 }
 
 
@@ -389,50 +373,35 @@ button {
 .social-grid {
     width: min(1000px, 100%);
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
 
 .social-card {
     display: flex;
     align-items: center;
-
     gap: 22px;
-
     background: #f4f1eb;
-
     padding: 35px;
-
     border: 1px solid rgba(23,23,20,0.07);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-card:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 20px 40px rgba(23,23,20,0.07);
+    box-shadow: 0 20px 40px rgba(23,23,20,0.07);
 }
 
 .social-icon {
     width: 52px;
     height: 52px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #171714;
     color: white;
-
     font-size: 25px;
     font-weight: 600;
 }
@@ -445,9 +414,7 @@ button {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-
     opacity: 0.5;
-
     margin-bottom: 3px;
 }
 
@@ -455,7 +422,6 @@ button {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 25px;
     font-weight: 400;
-
     margin-bottom: 5px;
 }
 
@@ -472,7 +438,6 @@ button {
 .contact {
     background: #171714;
     color: white;
-
     text-align: center;
 }
 
@@ -491,9 +456,7 @@ button {
 
 .contact-content > p:not(.section-label) {
     color: rgba(255,255,255,0.65);
-
     max-width: 550px;
-
     margin: 0 auto 35px;
 }
 
@@ -505,25 +468,20 @@ button {
 footer {
     background: #11110f;
     color: white;
-
     padding: 55px 5% 25px;
 }
 
 .footer-container {
     width: min(1200px, 100%);
     margin: auto;
-
     display: flex;
     justify-content: space-between;
-
     gap: 40px;
-
     padding-bottom: 45px;
 }
 
 .footer-brand p {
     margin-top: 12px;
-
     font-size: 13px;
     color: rgba(255,255,255,0.45);
 }
@@ -531,14 +489,12 @@ footer {
 .footer-links {
     display: flex;
     gap: 30px;
-
     align-items: flex-start;
 }
 
 .footer-links a {
     font-size: 12px;
     opacity: 0.65;
-
     transition: opacity 0.2s ease;
 }
 
@@ -549,9 +505,7 @@ footer {
 .footer-bottom {
     width: min(1200px, 100%);
     margin: auto;
-
     border-top: 1px solid rgba(255,255,255,0.1);
-
     padding-top: 22px;
 }
 
@@ -568,10 +522,7 @@ footer {
 .reveal {
     opacity: 0;
     transform: translateY(25px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.visible {
@@ -596,23 +547,15 @@ footer {
 
     .nav-links {
         display: none;
-
         position: absolute;
-
         top: 75px;
         left: 5%;
         right: 5%;
-
         flex-direction: column;
-
         gap: 0;
-
         background: #171714;
-
         padding: 10px 0;
-
-        box-shadow:
-            0 15px 40px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
     .nav-links.active {
@@ -649,10 +592,17 @@ footer {
         text-align: center;
     }
 
+    .facebook-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .facebook-post-card iframe {
+        max-width: 500px;
+    }
+
     .footer-container {
         flex-direction: column;
     }
-
 }
 
 
@@ -694,5 +644,14 @@ footer {
         gap: 18px;
     }
 
-   
+    .facebook-post-card iframe {
+        width: 100% !important;
+        height: auto;
+        min-height: 580px;
+    }
+
+    .facebook-video-card iframe {
+        width: 267px !important;
+        height: 476px !important;
+    }
 }
